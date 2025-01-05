@@ -15,7 +15,6 @@ def process_audio_endpoint():
         personalized_path = './uploads/2minutes.mp3'
         background_music_path = './uploads/background_music.mp3'
 
-        # Validation before continuing
         if not all(map(os.path.exists, [pre_generated_path, personalized_path, background_music_path])):
             return jsonify({"error": "One or more audio files are missing in the hardcoded paths."}), 400
 
